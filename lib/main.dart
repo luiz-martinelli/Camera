@@ -21,7 +21,7 @@ class _CameraScreenState extends State<CameraScreen> {
     });
     final pickedFile = await picker.pickImage(source: src);
     if (pickedFile != null) {
-      File cropped = await ImageCropper.cropImage(
+      File cropped = await ImageCropper().cropImage(
         sourcePath: pickedFile.path,
         aspectRatio: const CropAspectRatio(ratioX: 1, ratioY: 1),
         compressQuality: 100,
